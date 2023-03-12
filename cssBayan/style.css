@@ -1,0 +1,138 @@
+body {
+  max-width: 51rem;
+  margin: auto;
+  font-size: 2em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-y: overlay;
+  background: rgb(199, 199, 199);
+}
+
+.main {
+  padding: 0rem 1rem;
+}
+.bayan {
+  transition: 500ms ease;
+  background-color: rgb(206, 206, 206);
+  padding: 2rem;
+  color: rgb(169, 116, 255);
+}
+.activeIcon {
+  display: none;
+  height: 1em;
+}
+
+.card {
+  transition: 500ms ease;
+}
+
+.title {
+  border-top: solid black 0.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  padding-bottom: 1rem;
+}
+
+.memeImg {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: height 500ms, opacity 300ms;
+  display: flex;
+  justify-content: center;
+}
+
+.meme {
+  width: 70%;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+}
+
+.bayan:hover .activeIcon {
+  display: block;
+  transform: rotate(0);
+  transition: 300ms;
+}
+
+.bayan:hover {
+  color: black;
+}
+.card:hover > .activeIcon,
+.title:hover > .activeIcon {
+  display: none;
+}
+
+.card:hover .memeImg,
+.card:focus .memeImg,
+.title:hover + div,
+.title:focus + div {
+  height: 28.5rem;
+  opacity: 1;
+  transition: height 500ms, opacity 300ms;
+  display: flex;
+  justify-content: center;
+}
+
+.card:hover .activeIcon,
+.card:focus .activeIcon,
+.title:hover .activeIcon,
+.title:focus .activeIcon {
+  transform: rotate(45deg);
+  transition: 300ms;
+}
+
+.title:focus,
+.card:focus {
+  color: #000;
+}
+
+.card:active {
+  opacity: 0.5;
+}
+
+@media (max-width: 900px) {
+  body {
+    max-width: 35rem;
+    font-size: 1.5em;
+  }
+
+  .card:hover .memeImg,
+  .card:focus .memeImg,
+  .title:hover + div,
+  .title:focus + div {
+    height: 21rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    max-width: 25rem;
+    font-size: 1em;
+  }
+
+  .card:hover .memeImg,
+  .card:focus .memeImg,
+  .title:hover + div,
+  .title:focus + div {
+    height: 14.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    max-width: 15rem;
+    font-size: 0.9em;
+  }
+
+  .card:hover .memeImg,
+  .card:focus .memeImg,
+  .title:hover + div,
+  .title:focus + div {
+    height: 7.7rem;
+  }
+}
