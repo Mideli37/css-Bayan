@@ -46,6 +46,7 @@ body {
 .meme {
   width: 70%;
   padding-bottom: 1rem;
+  cursor: pointer;
 }
 
 h1 {
@@ -58,13 +59,16 @@ h1 {
   transition: 300ms;
 }
 
-.bayan:hover{
+.bayan:hover {
   color: black;
 }
+.card:hover > .activeIcon,
 .title:hover > .activeIcon {
   display: none;
 }
 
+.card:hover .memeImg,
+.card:focus .memeImg,
 .title:hover + div,
 .title:focus + div {
   height: 28.5rem;
@@ -73,14 +77,15 @@ h1 {
   display: flex;
   justify-content: center;
 }
-
+.card:hover .activeIcon,
+.card:focus .activeIcon,
 .title:hover .activeIcon,
 .title:focus .activeIcon {
   transform: rotate(45deg);
   transition: 300ms;
 }
 
-
 .title:focus {
   color: #000;
 }
+ 
