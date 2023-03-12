@@ -1,7 +1,7 @@
 body {
   max-width: 51rem;
   margin: auto;
-  font-size: 30px;
+  font-size: 2em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   overflow-y: overlay;
   background: rgb(199, 199, 199);
@@ -89,3 +89,47 @@ h1 {
   color: #000;
 }
  
+@media (max-width: 900px) {
+body {
+  max-width: 35rem;
+  font-size: 1.5em
+}
+
+.card:hover .memeImg,
+.card:focus .memeImg,
+.title:hover + div,
+.title:focus + div {
+  height: 21rem;
+}
+
+}
+
+@media (max-width: 600px) {
+  body {
+    max-width: 25rem;
+    font-size: 1em
+  }
+  
+  .card:hover .memeImg,
+  .card:focus .memeImg,
+  .title:hover + div,
+  .title:focus + div {
+    height: 14.5rem;
+  }
+  
+}
+
+@media (max-width: 420px) {
+  body {
+    max-width: 15rem;
+    font-size: 0.9em
+  }
+  
+  .card:hover .memeImg,
+  .card:focus .memeImg,
+  .title:hover + div,
+  .title:focus + div {
+    height: 7.7rem;
+  }
+  
+}
